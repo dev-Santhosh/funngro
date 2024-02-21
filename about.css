@@ -1,0 +1,64 @@
+.about_acheivements{
+    margin-top: 3rem;
+}
+.about_acheivements_container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+.about_acheivements_right>p{
+    margin: 1.6rem 0 2.5rem;
+}
+.acheivements_cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+}
+.acheivements_card{
+    background: var(--color-bg1);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: var(--transition);
+}
+.acheivements_card:hover{
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+}
+.acheivement_icon{
+    background: var(--color-danger);
+    padding: 0.6rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.acheivements_card:nth-child(2) .acheivement_icon{
+    background: var(--color-success);
+}
+.acheivements_card:nth-child(3) .acheivement_icon{
+    background: var(--color-primary);
+}
+.acheivements_card p {
+    margin-top: 1rem;
+}
+/* Media Queries Tablet */
+@media screen  and (max-width:1024px) {
+    .about_acheivements{
+        margin-top: 2rem;
+    }
+    .about_acheivements_container{
+        grid-template-columns: 1fr;
+    }
+    .about_acheivements_left{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+/* Media Queries Mobile */
+@media screen  and (max-width:600px) {
+    .acheivements_cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+}
